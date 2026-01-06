@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(135deg, #0F172A, #1E293B);
+}
+
+/* NAV Bar */
+nav {
+    background: rgba(15, 23, 41, 0.8);
+    margin: 0px 142px;
+    height: 64px;
+}
+
+.logo {
+    height: 64px;
+    display: flex;
+    align-items: left;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
