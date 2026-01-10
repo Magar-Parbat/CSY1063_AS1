@@ -206,3 +206,59 @@ main {
 .project-item p {
     font-size: 12px;
 }
+
+/* for contact page */
+
+.contact-main {
+    display: flex;
+    flex-wrap: wrap; /* allow items to go to next line */
+    gap: 20px;
+}
+
+.contact-intro {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.contact-info,
+.contact-form {
+    flex: 1 1 0; /* each takes equal remaining space */
+    border: 1px solid #D1D5DB;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    color: #CBD5E1; 
+    border-radius: 10px;
+}
+
+.contact-info ul {
+    list-style: none;
+}
+
+.contact-info ul li {
+    padding: 10px 0px;
+}
+
+.contact-info ul li a,
+.contact-info ul li a:visited {
+    color: #F8FAFC;
+    text-decoration: none;
+}
+
+.contact-info ul li a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 14px;
+    color: #F8FAFC;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+}
+
