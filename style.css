@@ -2,9 +2,13 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh; /* Full viewport height */
-    background: linear-gradient(135deg, #0F172A, #1E293B);
+    background: linear-gradient(135deg, #1E293B, #020617);
     display: flex;
     flex-direction: column;
+}
+
+main {
+    padding: 0px 142px;
 }
 
 /* for nav bar */
@@ -20,11 +24,19 @@ nav {
     font-size: 16px;
     color: #D1D5DB;
     border-bottom: 1px solid rgba(229, 231, 235, 0.2);
+    position: relative /* needed for dropdown menu */
 }
 
 nav img {
     height: 64px;
     width: auto;
+}
+
+.hamburger-icon {
+    display: none;
+    font-size: 32px;
+    color: #D1D5DB;
+    cursor: pointer;
 }
 
 nav ul {
@@ -52,10 +64,46 @@ nav ul li a.active {
     text-underline-offset: 6px;
 }
 
+@media (max-width: 768px) {
+
+    nav {
+        padding: 0 12px;
+    }
+
+    nav img {
+        height: 40px;
+    }
+
+    .hamburger-icon {
+        display: block;
+        background-color: rgba(15, 23, 42);
+        font-size: 24px;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px 0;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+}
+
 /* for footer */
 
 footer {
-    height: 120px;
+    min-height: 120px;
     background: #0F172A;
     margin: 0;
     padding: 0; 
@@ -64,7 +112,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 
     font-family: Tahoma, Arial, sans-serif;
     color: #D1D5DB;
@@ -92,37 +139,42 @@ footer p {
     font-size: 12px;
 }
 
-main{
-    flex-grow: 1;
+@media (max-width: 768px) {
+
+    footer {
+        height: 32px;
+        padding: 32px 16px;
+        font-size: 12px;
+        letter-spacing: 0.05em;
+    }
+
+    footer p {
+        margin-bottom: 12px;
+    }
+
+    .copyright {
+        font-size: 11px;
+    }
 }
 
 /* for home page */
 
 .hero {
-    padding: 0 142px;
     display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    max-height: 80vh;
-    gap: 2rem;
-    padding: 2rem 140px;
-
+    gap: 30px;
+    align-items: center
 }
 
-.hero_content, .hero_image {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem 2rem;
+.hero_content, .hero_image{
+    padding: 40px 0px;
 }
 
 .hero_image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%
 }
-
 
 h1, h2, h3 {
     font-family: Arial, sans-serif;
@@ -146,7 +198,7 @@ h3 {
 p {
     font-family: Tahoma, Arial, sans-serif;
     font-size: 16px;
-    color: #CBD5E1;
+    color: #F8FAFC;
     letter-spacing: 0.1em;
 }
 
@@ -155,13 +207,57 @@ p {
 }
 
 .about {
-    padding: 0 142px;
+    padding: 40px 0px;
+}
+
+.about h3 {
+    text-align: center;
+}
+
+@media (max-width: 768px){
+    main {
+        padding: 0px 24px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        gap: 20px;
+        width: 100%
+    }
+
+    .hero_content, .hero_image {
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .hero_image img {
+        padding: 12px 0 0 0;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .about {
+        padding: 24px 0;
+        width: 100%
+    }
 }
 
 /* for project page */
-main {
-    padding: 0px 142px 50px;
-}
 
 .project-heading {
     text-align: center;
@@ -205,6 +301,27 @@ main {
 
 .project-item p {
     font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .project-container {
+        display: grid;
+        grid-template-columns: auto; /* Single column */
+        gap: 20px; /* Adjust gap for mobile */
+        padding: 0 10px 10px 10px;
+    }
+
+    .project-item img {
+        height: 120px; /* Optional: slightly taller for single column */
+    }
+
+    .project-item h2 {
+        font-size: 14px; /* Smaller heading for mobile */
+    }
+
+    .project-item p {
+        font-size: 12px; /* Keep description readable */
+    }
 }
 
 /* for contact page */
@@ -261,4 +378,6 @@ main {
     border: 1px solid #334155;
     border-radius: 8px;
 }
+
+/* for videoDemo page */
 
