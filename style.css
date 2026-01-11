@@ -379,5 +379,43 @@ p {
     border-radius: 8px;
 }
 
+@media (max-width: 768px) {
+    .contact-main {
+        flex-direction: column; /* stack all items vertically */
+        gap: 20px; /* spacing between sections */
+        padding: 0 20px; /* optional padding for mobile */
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: 1 1 100%; /* full width */
+        text-align: left; /* optional: make text align left for better readability */
+        padding: 15px; /* slightly smaller padding for mobile */
+    }
+    
+    .contact-intro {
+        padding: 12px 0px;
+    }
+
+    .contact-intro h1 {
+        font-size: 24px;
+    }
+
+    .contact-intro p {
+        font-size: 14px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px; /* keep inputs readable on mobile */
+    }
+
+    .contact-info ul li {
+        font-size: 14px;
+    }
+}
+
+
+
 /* for videoDemo page */
 
