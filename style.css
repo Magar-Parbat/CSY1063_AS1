@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh; 
     background: linear-gradient(135deg, #1E293B, #020617);
     display: flex;
     flex-direction: column;
@@ -111,13 +111,13 @@ nav ul li a.active {
     nav ul {
         display: none;
         position: absolute;
-        top: 110%;               /* below hamburger */
+        top: 110%;               
         right: 0;
-        min-width: 110px;        /* prevent clipping */
+        min-width: 110px; 
         max-width: calc(100vw - 24px);
         padding: 16px 20px;
 
-        background: rgba(15, 23, 42, 0.98); /* POP background */
+        background: rgba(15, 23, 42, 0.98);
         border-radius: 8px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 
@@ -139,7 +139,7 @@ nav ul li a.active {
     nav ul li a {
         display: block;
         width: 100%;
-        white-space: nowrap;     /* keep text clean */
+        white-space: nowrap; /* keep text clean */
     }
 
     #menu-toggle:checked ~ ul {
@@ -336,7 +336,7 @@ p {
 
 .project-item img {
     width: 100%;
-    height: 180px;          /* pick a consistent height */
+    height: 180px;
     object-fit: cover;
     border-radius: 6px;
     display: block;
@@ -360,15 +360,15 @@ p {
     }
 
     .project-item img {
-        height: 120px; /* Optional: slightly taller for single column */
+        height: 120px; 
     }
 
     .project-item h2 {
-        font-size: 14px; /* Smaller heading for mobile */
+        font-size: 14px; 
     }
 
     .project-item p {
-        font-size: 12px; /* Keep description readable */
+        font-size: 12px; 
     }
 }
 
@@ -388,7 +388,7 @@ p {
 
 .contact-info,
 .contact-form {
-    flex: 1 1 0; /* each takes equal remaining space */
+    flex: 1 1 0; 
     border: 1px solid #D1D5DB;
     box-sizing: border-box;
     padding: 20px;
@@ -430,16 +430,16 @@ p {
 
 @media (max-width: 768px) {
     .contact-main {
-        flex-direction: column; /* stack all items vertically */
-        gap: 20px; /* spacing between sections */
-        padding: 0 20px; /* optional padding for mobile */
+        flex-direction: column; 
+        gap: 20px;
+        padding: 0 20px; 
     }
 
     .contact-info,
     .contact-form {
-        flex: 1 1 100%; /* full width */
-        text-align: left; /* optional: make text align left for better readability */
-        padding: 15px; /* slightly smaller padding for mobile */
+        flex: 1 1 100%; 
+        text-align: left; 
+        padding: 15px; 
     }
     
     .contact-intro {
@@ -456,7 +456,7 @@ p {
 
     .contact-form input,
     .contact-form textarea {
-        font-size: 14px; /* keep inputs readable on mobile */
+        font-size: 14px; 
     }
 
     .contact-info ul li {
@@ -529,12 +529,10 @@ p {
   display: block;
 }
 
-/* Force equal height */
 .wireframe {
   align-items: stretch;
 }
 
-/* Optional: limit height so huge images don't explode layout */
 .wireframe img {
   max-height: 500px;
 }
@@ -544,17 +542,15 @@ p {
   margin: 32px auto;
 }
 
-/* Remove default UL padding/margin */
 .validated_screenshot ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: 1fr; /* single column by default */
-  gap: 24px; /* spacing between each screenshot */
+  grid-template-columns: 1fr; 
+  gap: 24px; 
 }
 
-/* Each LI content */
 .validated_screenshot li {
   display: flex;
   flex-direction: column;
@@ -562,16 +558,14 @@ p {
   gap: 8px;
 }
 
-/* Text above images */
 .validated_screenshot li p {
   margin: 0;
   font-weight: 600;
 }
 
-/* Images themselves */
 .validated_screenshot li img {
   width: 100%;
-  max-width: 600px; /* limit max width so it doesn't explode */
+  max-width: 600px; 
   height: auto;
   object-fit: contain;
   border: 1px solid #ccc;
@@ -579,9 +573,8 @@ p {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Mobile responsive */
 @media (max-width: 768px) {
   .validated_screenshot li img {
-    max-width: 100%; /* full width on mobile */
+    max-width: 100%; 
   }
 }
