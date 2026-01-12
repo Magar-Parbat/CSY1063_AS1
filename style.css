@@ -33,6 +33,16 @@ nav img {
     width: auto;
 }
 
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
 .hamburger-icon {
     display: none;
     font-size: 32px;
@@ -74,6 +84,23 @@ nav ul li a.active {
     nav img {
         height: 40px;
     }
+    .menu {
+        position: relative;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    /* hide checkbox but keep it clickable */
+    #menu-toggle {
+        position: absolute;
+        top: 6px;
+        right: 0;
+        width: 32px;
+        height: 32px;
+        opacity: 0;
+        z-index: 2;
+        cursor: pointer;
+    }
 
     .hamburger-icon {
         display: block;
@@ -82,14 +109,23 @@ nav ul li a.active {
     }
 
     nav ul {
-        position: absolute;
-        top: 64px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        gap: 24px;
-        padding: 24px 0;
         display: none;
+        position: absolute;
+        top: 110%;               /* below hamburger */
+        right: 0;
+        min-width: 110px;        /* prevent clipping */
+        max-width: calc(100vw - 24px);
+        padding: 16px 20px;
+
+        background: rgba(15, 23, 42, 0.98); /* POP background */
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+
+        flex-direction: column;
+        gap: 14px;
+
+        text-align: left;
+        overflow: hidden;
     }
 
     nav ul.show {
@@ -97,8 +133,19 @@ nav ul li a.active {
     }
 
     nav ul li {
-        text-align: center;
+        text-align: left;
     }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        white-space: nowrap;     /* keep text clean */
+    }
+
+    #menu-toggle:checked ~ ul {
+        display: flex;
+    }
+
 }
 
 /* for footer */
@@ -331,6 +378,7 @@ p {
     display: flex;
     flex-wrap: wrap; /* allow items to go to next line */
     gap: 20px;
+    padding: 24px 142px;
 }
 
 .contact-intro {
@@ -418,3 +466,122 @@ p {
 
 /* for videoDemo page */
 
+.demo_description {
+    text-align: center;
+    padding: 12px 0 0px;
+}
+
+.video { 
+    position: relative;
+    width: 100%;
+    max-width: 960px; 
+    margin: 0 auto;
+    aspect-ratio: 16 / 9; 
+    background: #000; 
+    border-radius: 12px; 
+    overflow: hidden;
+}
+
+.video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-link p {
+    padding: 24px 0;
+    text-align: center;
+}
+
+.video-link p a{
+    text-decoration: underline;
+    color: #D1D5DB;
+}
+
+.video-link p a:hover{
+    color: #FFFFFF;
+    text-underline-offset: 6px;
+}
+
+/* for site report page */
+
+.report h1 {
+    text-align: center;
+    padding: 24px 0;
+}
+
+.wireframe {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.wireframe img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain; /* prevents stretching */
+  display: block;
+}
+
+/* Force equal height */
+.wireframe {
+  align-items: stretch;
+}
+
+/* Optional: limit height so huge images don't explode layout */
+.wireframe img {
+  max-height: 500px;
+}
+
+.validated_screenshot {
+  width: 100%;
+  margin: 32px auto;
+}
+
+/* Remove default UL padding/margin */
+.validated_screenshot ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr; /* single column by default */
+  gap: 24px; /* spacing between each screenshot */
+}
+
+/* Each LI content */
+.validated_screenshot li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Text above images */
+.validated_screenshot li p {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Images themselves */
+.validated_screenshot li img {
+  width: 100%;
+  max-width: 600px; /* limit max width so it doesn't explode */
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .validated_screenshot li img {
+    max-width: 100%; /* full width on mobile */
+  }
+}

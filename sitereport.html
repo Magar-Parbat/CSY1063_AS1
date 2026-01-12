@@ -9,6 +9,9 @@
     <body>
         <nav>
             <img src="images/logo.png" alt="Logo">
+            <div class="menu">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="project.html">Projects</a></li>
@@ -16,9 +19,102 @@
                     <li><a href="videoDemo.html">Video Demo</a></li>
                     <li><a href="siteReport.html" class="active">Site Report</a></li>
                 </ul>
+            </div>
         </nav>
+
         <main>
-            
+            <section class="report">
+            <h1>Site Report</h1>
+
+            <h2>Introduction</h2>
+            <p>
+                his site aims at displaying my individually designed portfolio site constructed utilizing HTML & CSS skills acquired during the Web Development Module, CSY1063. This site illustrates foundation skills in front end development, which involve semantic HTML markup, design, CSS, device responsiveness, & basic interaction skills based on hover effects. This report will highlight my learning process, my design choices, technological implementation, the difficulties encountered during site creation, & the use of validation & versioning.
+            </p>
+            <h2>Learning Experience and Development Process</h2>
+            <p>
+                Throughout this project, I developed a stronger understanding of semantic HTML and the importance of using correct elements such as nav, main, section and footer instead of generic div tags. Initially, structuring layouts and managing spacing across different screen sizes was challenging, but regular testing using browser developer tools helped me understand how CSS properties interact.
+            </p>
+            <p>
+                My knowledge of CSS improved significantly, particularly in using Flexbox and Grid for layout control, implementing transitions for hover effects, and applying media queries for responsive design. I also gained practical experience using Git and GitHub for version control. Making regular commits over multiple dates helped me track progress, fix mistakes, and refine features incrementally rather than making large changes all at once.
+            </p>  
+            <h2>User Interface and Design Choices</h2>
+            <p>
+                The site has a modern and professional appearance suitable for a computer science portfolio. This has been achieved through the use of a dark blue color scheme along with gradient backgrounds. The text colors have been selected in a way that ensures there is sufficient contrast. This has been achieved through the use of lighter text colors. Web-safe fonts, such as Tahoma and Arial, have been used.
+            </p>
+            <p>
+                The wireframes for each page of the site on both desktop and mobile had been created beforehand. This helped to ensure a standardized layout on each page. A visual hierarchy was established by varying the use of font sizes and spaces, and the presence of interactivity was indicated by the use of hover effects on project and navigation links.
+            </p>
+            <h3>Home Page</h3>
+            <p>
+                The home page introduces the purpose of the site and provides a brief personal introduction. The layout uses Flexbox to align content and adapts responsively on smaller screens.
+            </p>
+            <div class="wireframe">
+                <img src="images/home_page_wireframe.png" alt="home page wireframe">
+                <img src="images/mobile_home_wireframe.png" alt="mboile home page wireframe">
+            </div>
+            <h3>Project page</h3>
+            <p>
+                The project page uses CSS Grid to display project cards in a structured layout on desktop screens, transitioning to a single-column layout on mobile devices. Hover effects are applied to improve user feedback.
+            </p>
+            <div class="wireframe">
+                <img src="images/project_page_wireframe.png" alt="project page wireframe">
+                <img src="images/mobile_project_wireframe.png" alt="mobile project page wireframe">
+            </div>
+            <h3>contact Page</h3>
+            <p>
+                The contact page provides contact information and a form that opens the user’s email client, as required by the module brie
+            </p>
+            <div class="wireframe">
+                <img src="images/contact_page_wireframe.png" alt="contact page wireframe">
+                <img src="images/mobile_contact_wireframe.png" alt="mobile contact page wireframe">
+            </div>
+            <h3>Video Demo Page</h3>
+            <p>
+                This page contains an embedded video demonstration explaining the structure, layout, and responsive features of the website.
+            </p>
+            <div class="wireframe">
+                <img src="images/video_page_wireframe.png" alt="video demo page wireframe">
+                <img src="images/mobile_video_wireframe.png" alt="mobile video demo page wireframe">
+            </div>
+            <h3>Site Report Page</h3>
+            <p>
+                The site report page documents the development process, reflections, and technical decisions made during the project.
+            </p>
+            <div class="wireframe">
+                <img src="images/report_page_wireframe.png" alt="site report page wireframe">
+                <img src="images/mobile_report_wireframe.png" alt="mobile site report wireframe">
+            </div>
+            <h2>Technical implementation</h2>
+            <p>
+                Each page employs a uniform navigational bar, as well as a footer, which helps create consistency in appearance. Flexbox layout has been applied in the alignment processes related to navigation, hero sections, and contact pages. CSS Grid, however, has been used on the projects page. The responsiveness strategy has been achieved through the employment of media queries, which target screens less than or equal to 768px. The hamburger menu navigational system is only visible on mobile devices.
+            </p>
+            <h2>Validation and Standards Compliance</h2>
+            <p>
+                All HTML and CSS files were validated using the W3C HTML and CSS validation tools. Screenshots of validation reports for each page are included below to demonstrate compliance with web standards.
+            </p>
+            <h3>Validation Screenshots</h3>
+            <div class="validated_screenshot"><
+            <ul>
+                <li><p>index.html Page</p></li>
+                <li><img src="images/index_page_validator.png" alt="w3c validation image "></li>
+                <li><p>project.html Page</p></li>
+                <li><img src="images/project_page_validator.png" alt="w3c validation image "></li>
+                <li><p>contact.html Page</p></li>
+                <li><img src="images/contact_page_validator.png" alt="w3c validation image "></li>
+                <li><p>videoDemo.html Page</p></li>
+                <li><img src="images/video_page_validator.png" alt="w3c validation image "></li>  
+                <li><p>sitereport.html Page</p></li>
+                <li><img src="images/site_report_page_validotor.png" alt="w3c validation image "></li>
+            </ul>
+            </div>
+            <h2>Conclusion</h2>
+            <p>
+                To me, this portfolio site is the epitome of learning that has occurred in the CSY1063 Web Development module. By creating and constructing numerous pages, and using CSS Grid and Flexbox, I was able to learn through practical means the concepts of front-end web development. The issues that arose, for example, when creating a site that is truly and uniformly responsive, or when attempting to center information, and when checking for proper coding, were useful experiences that improved problem-solving and coding skills. The use of GitHub versioning has further emphasized the need for proper and organized project flow.
+            </p>
+            <div class="video-link">
+                <p>Video Link: <a href="https://youtu.be/Dfty_yc0n_M?si=W7PW3dgC720xe9u4" target="_blank">youtu.be/Dfty_yc0n_M?si=W7PW3dgC720xe9u4</a></p>
+            </div>
+            </section>
         </main>
         <footer>
             <p class="copyright">&copy; 2026 Parbat Magar</p>
